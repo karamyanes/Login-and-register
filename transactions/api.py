@@ -18,5 +18,9 @@ from .serializers import TransactionListSerializer
 
 
 class TransactionView(viewsets.ModelViewSet):
-    queryset = Transaction.objects.all()
-    serializer_class = TransactionListSerializer
+	"""
+	A simple ViewSet for view, edit and delete Transactions.
+	"""
+	queryset = Transaction.objects.all()
+	serializer_class = TransactionListSerializer
+	permission_classes = [permissions.IsAuthenticated]
