@@ -36,8 +36,8 @@ Corgee REST API App
 
 
 ### Tests:
--- To be added ..
-
+-- To run tests ..
+`./manage.py test`
 
 ### Application using: 
 - Django: 3.1.4
