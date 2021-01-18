@@ -1,5 +1,4 @@
 import uuid
-
 from rest_framework import generics, permissions, views, status
 from rest_framework.response import Response
 from .serializer import RegisterSerializer, UserSerializer, CustomTokenObtainPairSerializer
