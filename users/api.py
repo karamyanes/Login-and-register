@@ -32,7 +32,7 @@ class UserLogoutAll(views.APIView):
     This endpoint to log out all sessions for a given user
     """
 
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]# Is user already authenticated (logged in) or not.
 
     def post(self, request, *args, **kwargs):
         user = request.user
