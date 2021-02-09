@@ -23,4 +23,4 @@ class TransactionView(viewsets.ModelViewSet):
 	"""
 	queryset = Transaction.objects.all()
 	serializer_class = TransactionListSerializer
-	permission_classes = [permissions.IsAuthenticated]
+	#permission_classes = [permissions.IsAuthenticated]

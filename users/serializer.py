@@ -23,7 +23,7 @@ class RegisterSerializer(serializers.ModelSerializer):# RegissterSerializer is t
                 password = validated_data['password'],
                 first_name=validated_data['first_name'],
                 last_name=validated_data['last_name'],
-                email=validated_data['email']
+                email=validated_data['email'],
             )
         return user
 

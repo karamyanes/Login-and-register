@@ -22,5 +22,6 @@ urlpatterns = [
     # users app
     path('api/users/', include('users.urls')),
     # Transactions app
-    path('api/', include('transactions.urls')),
+ #   path('api/', include('transactions.urls')),
+    path('api/game/', include('score.urls')),
 ]
