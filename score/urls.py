@@ -5,14 +5,13 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('question', api.QuestionView)
-router.register('answer', api.AnswerView)
-router.register('game', api.GameView)
+router.register('player',api.PlayerView)
 
 
 
 urlpatterns = [
-    #path('answer/', include(router.urls)),
-    path('game/question/answer', include(router.urls)),
+    path('', include(router.urls)),
+    path('answer/', api.AnswerView.as_view()),
    #  path('question/',include(router.urls)),
 	# path("transaction/list/", TransactionListAPI.as_view()),
 ]

@@ -1,4 +1,3 @@
-from .models import Game
 from .models import UserQuestionHistory
 from .models import Player
 from .models import Question
@@ -7,10 +6,7 @@ from .models import Result
 from rest_framework import serializers
 
 
-class GameListSerializer(serializers.ModelSerializer):
-	class Meta:
-		model = Game
-		fields = "__all__"
+
 
 class PlayerListSerializer(serializers.ModelSerializer):
 	class Meta:

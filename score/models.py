@@ -3,18 +3,11 @@ from django.contrib.auth.models import User
 
   
 
-# Create your models here.
-
-class Game(models.Model): #we write models.Model to see that the class is type model and it is database
-    name = models.CharField(max_length=50)
-    id = models.AutoField(primary_key=True)
-    
-    def __str__(self):
-        return self.name
+# Create your models here
 
 class Question(models.Model):
     question_text = models.CharField(max_length=2000)
-    gameid = models.ForeignKey(Game, on_delete=models.CASCADE, verbose_name = "related to Game")
+    
     
     def __str__(self):
         return self.question_text
@@ -46,7 +39,6 @@ class UserQuestionHistory(models.Model):
     respoender_id= models.ForeignKey(Player, on_delete=models.CASCADE, related_name = "respoender")
 
 class Result(models.Model):
-    game_id= models.ForeignKey(Game, on_delete=models.CASCADE, related_name = "Game")
     answer_id= models.ForeignKey(Answer, on_delete=models.CASCADE, related_name = "Answer") 
     question_id= models.ForeignKey(Question, on_delete=models.CASCADE, related_name = "spørsmål")
     questioner_id= models.ForeignKey(Player, on_delete=models.CASCADE, related_name = "Player_1")
